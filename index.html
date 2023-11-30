@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Hi From Kunmi</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-color: white;
+        --text-color: black;
+      }
+      .dark {
+        --bg-color: black;
+        --text-color: white;
+      }
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        transition: background-color 0.5s, color 0.5s;
+      }
+      #toggle {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center h-screen ">
+    <button
+      id="toggle"
+      class="fixed top-4 right-4 bg-gray-600 p-2 rounded"
+    >
+      Toggle Mode
+    </button>
+    <h1 class="text-4xl font-bold ">Give your life to Christ - 💁🏾‍♂️</h1>
+   <script>
+      document.getElementById('toggle').addEventListener('click', function () {
+        document.body.classList.toggle('dark');
+      });
+    </script>
+    </script>
+  </body>
+</html>
