@@ -38,15 +38,34 @@
       }
     </style>
   </head>
-  <body class="flex items-center justify-center h-screen ">
+  <body class="flex flex-col items-center justify-center h-screen ">
     <button
       id="toggle"
       class="fixed top-4 right-4 bg-gray-600 p-2 rounded"
     >
       Toggle Mode
     </button>
-    <h1 class="text-4xl font-bold ">Give your life to Christ - 💁🏾‍♂️</h1>
+    <h1 class="lg:text-4xl text-2xl font-bold ">Give your life to Christ - 💁🏾‍♂️</h1>
+        <div id="quote" class="text-center text-muted px-4 py-2  dark:text-white"></div>
    <script>
+    const bibleVerses = [
+        "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope. - Jeremiah 29:11",
+        "The Lord is my shepherd; I shall not want. - Psalm 23:1",
+        "I can do all things through him who strengthens me. - Philippians 4:13",
+        "And we know that in all things God works for the good of those who love him, who have been called according to his purpose. - Romans 8:28",
+        "The Lord is near to the brokenhearted and saves the crushed in spirit. - Psalm 34:18",
+        "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight. - Proverbs 3:5-6",
+        "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. Against such things there is no law. - Galatians 5:22-23",
+        "Be strong and courageous. Do not be afraid or terrified because of them, for the Lord your God goes with you; he will never leave you nor forsake you. - Deuteronomy 31:6",
+        "Therefore do not worry about tomorrow, for tomorrow will worry about itself. Each day has enough trouble of its own. - Matthew 6:34",
+        "But the wisdom that comes from heaven is first of all pure; then peace-loving, considerate, submissive, full of mercy and good fruit, impartial and sincere. - James 3:17"
+      ];
+      function getRandomQuote() {
+        var randomIndex = Math.floor(Math.random() * bibleVerses.length);
+        return bibleVerses[randomIndex];
+      }
+
+      document.getElementById('quote').textContent = getRandomQuote();
       document.getElementById('toggle').addEventListener('click', function () {
         document.body.classList.toggle('dark');
       });
