@@ -38,7 +38,7 @@
       }
     </style>
   </head>
-  <body class="flex flex-col items-center justify-center h-screen ">
+  <body class="dark flex flex-col items-center justify-center h-screen ">
     <button
       id="toggle"
       class="fixed top-4 right-4 bg-gray-600 p-2 rounded"
@@ -48,6 +48,9 @@
     <h1 class="lg:text-4xl text-2xl font-bold ">Give your life to Christ - 💁🏾‍♂️</h1>
         <div id="quote" class="text-center text-muted px-4 py-2  dark:text-white"></div>
    <script>
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+      }
     const bibleVerses = [
         "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope. - Jeremiah 29:11",
         "The Lord is my shepherd; I shall not want. - Psalm 23:1",
